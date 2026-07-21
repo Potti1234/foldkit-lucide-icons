@@ -1,6 +1,6 @@
 {
   "name": "foldkit-lucide-icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Foldkit-native views for Lucide icons",
   "keywords": [
     "foldkit",
@@ -32,10 +32,12 @@
   },
   "scripts": {
     "build": "tsup",
+    "generate:icons": "node scripts/generate-icons.mjs",
+    "check:generated": "node scripts/generate-icons.mjs --check",
     "clean": "tsup --clean",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm test && npm run build && npm pack --dry-run",
+    "check": "npm run check:generated && npm run typecheck && npm test && npm run build && npm pack --dry-run",
     "prepublishOnly": "npm run check"
   },
   "repository": {

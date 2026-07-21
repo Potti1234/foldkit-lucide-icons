@@ -12,9 +12,9 @@ npm install foldkit-lucide-icons foldkit
 
 `foldkit` is a peer dependency. Lucide is installed by this package.
 
-## Use a bundled icon
+## Use an icon
 
-Bundled icons are available from the tree-shakeable `icons` entry point:
+All Lucide icons and their aliases are available from the tree-shakeable `icons` entry point:
 
 ```ts
 import { html } from "foldkit/html";
@@ -36,16 +36,18 @@ Search({ size: 18, label: "Search" });
 
 Options include `size`, `color`, `strokeWidth`, `absoluteStrokeWidth`, `class`, and `label`.
 
-## Wrap any Lucide icon
+## Updating the icon set
 
-You can use an icon that is not part of the bundled entry point:
+The exports in `src/icons.ts` are generated from the installed `lucide` package. After updating
+Lucide, regenerate them and run the checks:
 
-```ts
-import { Rocket as RocketNode } from "lucide";
-import { defineIcon } from "foldkit-lucide-icons";
-
-export const Rocket = defineIcon(RocketNode);
+```sh
+npm update lucide
+npm run generate:icons
+npm run check
 ```
+
+Do not edit `src/icons.ts` by hand. The release check fails when the generated file is stale.
 
 ## Development
 
@@ -58,8 +60,7 @@ npm pack --dry-run
 
 ## Publishing
 
-The first release is prepared as version `0.1.0`. See [PUBLISHING.md](./PUBLISHING.md) for the
-complete first-time npm publishing walkthrough.
+See [PUBLISHING.md](./PUBLISHING.md) for the npm publishing walkthrough.
 
 ## License
 

@@ -1,7 +1,13 @@
 import { describe, expect, test } from "vitest";
+import { icons as lucideIcons } from "lucide";
+import * as generatedIcons from "./icons";
 import { Check, LogOut } from "./icons";
 
 describe("Foldkit Lucide icons", () => {
+  test("exports every Lucide icon and alias", () => {
+    expect(Object.keys(generatedIcons).sort()).toEqual(Object.keys(lucideIcons).sort());
+  });
+
   test("renders a decorative SVG with Lucide defaults", () => {
     const node = Check();
 

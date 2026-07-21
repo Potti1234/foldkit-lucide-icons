@@ -1,7 +1,6 @@
 # Publishing to npm
 
-The package name `foldkit-lucide-icons` was available when this repository was prepared. npm names
-are claimed on a first-publish basis, so verify it again immediately before publishing.
+The package is published as `foldkit-lucide-icons`.
 
 ## 1. Create and verify your npm account
 
@@ -41,17 +40,17 @@ npm view foldkit-lucide-icons
 npm pack --dry-run
 ```
 
-For the first release, the `npm view` command should return a 404 because no release exists yet.
+The `npm view` command shows the currently published release.
 
-## 4. Commit and tag the release
+## 4. Commit the release
 
 ```sh
 git add .
-git commit -m "Prepare foldkit-lucide-icons 0.1.0"
+git commit -m "Release foldkit-lucide-icons 0.2.0"
 git push origin main
 ```
 
-## 5. Publish version 0.1.0
+## 5. Publish the new version
 
 ```sh
 npm publish
@@ -64,8 +63,8 @@ in the practical sense: avoid unpublishing releases; publish a corrected version
 After it succeeds, create and push a matching Git tag:
 
 ```sh
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.2.0
+git push origin v0.2.0
 ```
 
 Confirm the published package from a temporary project:
