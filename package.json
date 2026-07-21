@@ -1,0 +1,67 @@
+{
+  "name": "foldkit-lucide-icons",
+  "version": "0.1.0",
+  "description": "Foldkit-native views for Lucide icons",
+  "keywords": [
+    "foldkit",
+    "lucide",
+    "icons",
+    "svg"
+  ],
+  "license": "MIT",
+  "author": "Potti1234",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "PUBLISHING.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/icons.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "tsup --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run build && npm pack --dry-run",
+    "prepublishOnly": "npm run check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Potti1234/foldkit-lucide-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Potti1234/foldkit-lucide-icons/issues"
+  },
+  "homepage": "https://github.com/Potti1234/foldkit-lucide-icons#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lucide": "^1.25.0"
+  },
+  "peerDependencies": {
+    "foldkit": ">=0.128.0 <1"
+  },
+  "devDependencies": {
+    "foldkit": "^0.130.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
