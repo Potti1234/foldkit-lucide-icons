@@ -1,7 +1,7 @@
 {
   "name": "foldkit-lucide-icons",
-  "version": "0.2.0",
-  "description": "Foldkit-native views for Lucide icons",
+  "version": "0.2.1",
+  "description": "Unofficial Foldkit-native views for Lucide icons",
   "keywords": [
     "foldkit",
     "lucide",
@@ -16,6 +16,7 @@
     "dist",
     "README.md",
     "PUBLISHING.md",
+    "THIRD-PARTY-NOTICES.md",
     "LICENSE"
   ],
   "main": "./dist/index.js",

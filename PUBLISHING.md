@@ -46,7 +46,7 @@ The `npm view` command shows the currently published release.
 
 ```sh
 git add .
-git commit -m "Release foldkit-lucide-icons 0.2.0"
+git commit -m "Release foldkit-lucide-icons 0.2.1"
 git push origin main
 ```
 
@@ -63,8 +63,8 @@ in the practical sense: avoid unpublishing releases; publish a corrected version
 After it succeeds, create and push a matching Git tag:
 
 ```sh
-git tag v0.2.0
-git push origin v0.2.0
+git tag v0.2.1
+git push origin v0.2.1
 ```
 
 Confirm the published package from a temporary project:

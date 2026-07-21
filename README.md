@@ -4,6 +4,10 @@ Foldkit-native views for [Lucide](https://lucide.dev/) icons. This package rende
 framework-agnostic SVG data through `foldkit/html`, without React, HTML string injection, or copied
 SVG markup.
 
+> [!IMPORTANT]
+> This is an independent, unofficial community package. It is not affiliated with, endorsed by, or
+> sponsored by the Lucide or Foldkit projects or their maintainers.
+
 ## Install
 
 ```sh
@@ -64,4 +68,7 @@ See [PUBLISHING.md](./PUBLISHING.md) for the npm publishing walkthrough.
 
 ## License
 
-[MIT](./LICENSE)
+The original adapter code in this package is available under the [MIT License](./LICENSE).
+Lucide is available under the ISC License, with some icons derived from Feather and covered by the
+MIT License. Foldkit is available under the MIT License. See
+[Third-Party Notices](./THIRD-PARTY-NOTICES.md) for the complete notices and attributions.
